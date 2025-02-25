@@ -1,0 +1,46 @@
+# Ignore vendor dependencies (außer wenn du einen Composer Lock speichern willst)
+vendor/
+composer.lock
+
+# Ignore Symfony cache & logs (falls das Bundle lokal getestet wird)
+var/cache/
+var/logs/
+var/sessions/
+
+# Ignore IDE / Editor-Dateien
+.idea/
+.vscode/
+*.swp
+*.swo
+*.bak
+
+# Ignore macOS System-Dateien
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Ignore Linux/Windows System-Dateien
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Ignore PHPUnit Test Coverage & Report-Dateien
+phpunit.xml
+phpunit.xml.dist
+coverage.xml
+clover.xml
+.phpunit.cache/
+.phpunit.result.cache
+
+# Ignore Auto-Generated Symfony Files
+.env
+.env.local
+.env.*.local
+.env.test
+.env.test.local
+
+# Ignore build artifacts
+build/
+dist/

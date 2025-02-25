@@ -1,0 +1,24 @@
+services:
+  _defaults:
+    autowire: true
+    autoconfigure: true
+
+  ConfigInspectorBundle\Service\EnvConfigLoader:
+    arguments:
+      $projectDir: '%kernel.project_dir%'
+
+  ConfigInspectorBundle\Service\ParametersConfigLoader:
+    arguments:
+      $projectDir: '%kernel.project_dir%'
+      $env: '%kernel.environment%'
+
+  ConfigInspectorBundle\Service\PackageConfigLoader:
+    arguments:
+      $projectDir: '%kernel.project_dir%'
+      $env: '%kernel.environment%'
+
+  ConfigInspectorBundle\Service\ConfigManager:
+    calls:
+      - addLoader: ['@ConfigInspectorBundle\Service\EnvConfigLoader']
+      - addLoader: ['@ConfigInspectorBundle\Service\ParametersConfigLoader']
+      - addLoader: ['@ConfigInspectorBundle\Service\PackageConfigLoader']

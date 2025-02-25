@@ -1,0 +1,30 @@
+{
+  "name": "joris89/config-inspector-bundle",
+  "description": "Ein Symfony-Bundle zum Debuggen von Konfigurationswerten.",
+  "type": "symfony-bundle",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Joris",
+      "email": "deinemail@example.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "ConfigInspectorBundle\\": "src/"
+    }
+  },
+  "require": {
+    "php": ">=8.0",
+    "symfony/console": "^5.4 || ^6.0",
+    "symfony/yaml": "^5.4 || ^6.0",
+    "symfony/dotenv": "^5.4 || ^6.0",
+    "symfony/dependency-injection": "^5.4 || ^6.0",
+    "symfony/config": "^5.4 || ^6.0"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-main": "1.0-dev"
+    }
+  }
+}
